@@ -22,6 +22,8 @@ var pText = document.createTextNode(pString);
 paragraph.appendChild(pText);
 document.body.insertAdjacentElement('beforebegin',paragraph);
 console.log(viewport);
+window.time = new Date();
+console.log(window.time);
 return setupPage=true;
 }
 
@@ -38,3 +40,11 @@ var saveTextFile = function(){
     anchor.dataset.downloadurl = ['text/plain',anchor.download,anchor.href].join(':');
     anchor.click();
 }
+
+let checkTimeElapsed = function(){
+    let currentTime, elapsedTime;
+    currentTime = new Date();
+    elapsedTime = currentTime - window.time;
+    return elapsedTime;
+}
+
