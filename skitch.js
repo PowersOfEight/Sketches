@@ -25,3 +25,16 @@ console.log(viewport);
 return setupPage=true;
 }
 
+
+//lets see if I can save a file
+
+var saveTextFile = function(){
+    var text = "hullo wurld",
+        blob = new Blob([text],{type: 'text/plain'}),
+        anchor = document.createElement('a');
+    
+    anchor.download = "hullo.txt";
+    anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+    anchor.dataset.downloadurl = ['text/plain',anchor.download,anchor.href].join(':');
+    anchor.click();
+}
