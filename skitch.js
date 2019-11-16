@@ -48,3 +48,5 @@ let checkTimeElapsed = function(){
     return elapsedTime;
 }
 
+//I'm making a comment to see if I can get github to accept the changes
+//I initially staged them... don't know if that was a great idear
